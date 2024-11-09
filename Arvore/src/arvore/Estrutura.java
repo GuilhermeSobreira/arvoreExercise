@@ -98,19 +98,23 @@ public class Estrutura {
 		return no;
 	}
 	
-	//corrigir isso aqui (colocar else)
 	public No removerMenor() {
 		if(this.raiz == null) {
 			return null;
 		}
-		return removerMenor();
+		
+		this.raiz = removerMenor(this.raiz);
+		return this.raiz;
 	}
 	
 	private No removerMenor(No no) {
 		if(no.getEsquerda() == null) {
-			no = removerMenor(no.getEsquerda());
-		}
+			return no.getDireita();
+		} else {
 		no.setEsquerda(removerMenor(no.getEsquerda()));
 		return no;
 	}
+		
+  }
+	
 }
