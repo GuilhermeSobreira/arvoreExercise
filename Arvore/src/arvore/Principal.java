@@ -18,18 +18,26 @@ public class Principal {
 		
 		e.preOrdem();
 		System.out.println("\n________________________________\n");
+		
 		e.posOrdem();
 		System.out.println("\n________________________________\n");
-		e.inOrdem();
 		
+		e.inOrdem();
+		System.out.println("\n________________________________\n");
+
 		n = e.valorMinimo();
 		System.out.println("\nValor minimo = " + n.getValor());
 		
 		n = e.valorMaximo();
 		System.out.println("\nValor máximo = " + n.getValor());
 		
-		n = e.removerMenor();
-		System.out.println("\nRemover menor = " + e.removerMenor());
+		System.out.println("\n________________________________\n");
+				
+		e.removerMenor();
+
+		System.out.println("\nRemovido o menor: ");
+		e.inOrdem();
+
 	}
 
 }
